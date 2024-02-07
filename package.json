@@ -1,22 +1,37 @@
 {
-  "name": "app_progra",
+  "name": "mern-tasks",
   "version": "1.0.0",
-  "description": "",
+  "description": "A MERN CRUD with Authentication",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "cross-env NODE_ENV=development nodemon src/index.js --ignore client",
+    "start": "cross-env NODE_ENV=production node src/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "expres": "^0.0.5",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
-    "mongoose": "^8.1.1",
-    "morgan": "^1.10.0"
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.6.7",
+    "morgan": "^1.10.0",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
-    "nodemon": "^3.0.3"
-  }
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.1.3",
+    "nodemon": "^2.0.22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fazt/mern-crud-auth.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fazt/mern-crud-auth/issues"
+  },
+  "homepage": "https://github.com/fazt/mern-crud-auth#readme"
 }
